@@ -5,12 +5,12 @@
 
 	<parent>
     	<groupId>com.alinesno.infra.smart</groupId>
-    	<artifactId>alinesno-infra-base-ocr-parent</artifactId>
+    	<artifactId>alinesno-infra-smart-ocr-parent</artifactId>
 		<version>${revision}</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>alinesno-infra-base-ocr-facade</artifactId>
+	<artifactId>alinesno-infra-smart-ocr-facade</artifactId>
 	<packaging>jar</packaging>
 
 	<dependencies>

@@ -3,12 +3,12 @@
 
 	<parent>
 		<groupId>com.alinesno.infra.smart</groupId>
-		<artifactId>alinesno-infra-base-ocr-parent</artifactId>
+		<artifactId>alinesno-infra-smart-ocr-parent</artifactId>
 		<version>${revision}</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>alinesno-infra-base-ocr-admin</artifactId>
+	<artifactId>alinesno-infra-smart-ocr-admin</artifactId>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -81,11 +81,11 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/docker/dist</outputDirectory>
+							<outputDirectory>${smartdir}/docker/dist</outputDirectory>
 							<outputDirectory>${project.build.directory}/classes/static</outputDirectory>
 							<resources>
 								<resource>
-									<directory>${basedir}/dist</directory>
+									<directory>${smartdir}/dist</directory>
 								</resource>
 							</resources>
 						</configuration>

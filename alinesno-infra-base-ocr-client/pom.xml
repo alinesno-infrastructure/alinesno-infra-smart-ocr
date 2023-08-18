@@ -5,12 +5,12 @@
 
 	<parent>
     	<groupId>com.alinesno.infra.smart</groupId>
-    	<artifactId>alinesno-infra-base-ocr-parent</artifactId>
+    	<artifactId>alinesno-infra-smart-ocr-parent</artifactId>
 		<version>${revision}</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>alinesno-infra-base-ocr-client</artifactId>
+	<artifactId>alinesno-infra-smart-ocr-client</artifactId>
 	<packaging>jar</packaging>
 
 	<dependencies>
@@ -18,7 +18,7 @@
 		<!-- 引用公共门面服务 -->
 		<dependency>
 			<groupId>com.alinesno.infra.smart</groupId>
-			<artifactId>alinesno-infra-base-ocr-facade</artifactId>
+			<artifactId>alinesno-infra-smart-ocr-facade</artifactId>
 			<version>${revision}</version>
 		</dependency>
 

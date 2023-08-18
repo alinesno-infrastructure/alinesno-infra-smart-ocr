@@ -5,12 +5,12 @@
 
 	<parent>
     	<groupId>com.alinesno.infra.smart</groupId>
-    	<artifactId>alinesno-infra-base-ocr-parent</artifactId>
+    	<artifactId>alinesno-infra-smart-ocr-parent</artifactId>
 		<version>${revision}</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>alinesno-infra-base-ocr-boot</artifactId>
+	<artifactId>alinesno-infra-smart-ocr-boot</artifactId>
 	<packaging>jar</packaging>
 
 	<dependencies>
@@ -18,17 +18,17 @@
         <!-- 引用服务 -->
 		<dependency>
 			<groupId>com.alinesno.infra.smart</groupId>
-			<artifactId>alinesno-infra-base-ocr-domain</artifactId>
+			<artifactId>alinesno-infra-smart-ocr-domain</artifactId>
 			<version>${revision}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alinesno.infra.smart</groupId>
-			<artifactId>alinesno-infra-base-ocr-adapter</artifactId>
+			<artifactId>alinesno-infra-smart-ocr-adapter</artifactId>
 			<version>${revision}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alinesno.infra.smart</groupId>
-			<artifactId>alinesno-infra-base-ocr-api</artifactId>
+			<artifactId>alinesno-infra-smart-ocr-api</artifactId>
 			<version>${revision}</version>
 		</dependency>
 

@@ -1,5 +1,5 @@
 server:
-  port: ocr
+  port: 30300
 
 # spring 配置
 spring:

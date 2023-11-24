@@ -18,6 +18,18 @@ spring:
   devtools:
     restart:
       enabled: true
+      
+actable:
+  table:
+    auto: update
+  model:
+    pack: com.alinesno.infra.smart.ocr.entity;
+  database:
+    type: mysql
+  index:
+    prefix: alinesno_smart_ocr_idx_
+  unique:
+    prefix: alinesno_smart_ocr_uni_
 
 # sa-token配置
 sa-token:

@@ -7,6 +7,8 @@ target
 bin
 classpath-data.json
 sts-cache
+__pycache__
+yarn.lock
 
 # Compiled class file
 *.class

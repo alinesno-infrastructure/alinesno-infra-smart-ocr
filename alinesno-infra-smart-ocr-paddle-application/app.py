@@ -96,7 +96,7 @@ def detect():
 
         return jsonify({
             'status': 'success',
-            'data': results,  # 返回识别结果列表
+            'data': result,  # 返回识别结果列表
             'usage_time': '{:.4f}s'.format(start_time - end_time)  # 返回识别所用时间
         })
     return jsonify({'服务状态': 'faild'})  # 文件上传失败时返回失败状态信息

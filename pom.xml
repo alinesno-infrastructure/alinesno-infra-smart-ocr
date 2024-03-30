@@ -25,12 +25,12 @@
         <module>alinesno-infra-smart-ocr-facade</module>  <!-- 接口和引用 -->
         <module>alinesno-infra-smart-ocr-domain</module>  <!-- 领域服务 -->
         <module>alinesno-infra-smart-ocr-adapter</module> <!-- 适配层 -->
-        <module>alinesno-infra-smart-ocr-api</module>  <!-- 接口服务 -->
+        <module>alinesno-infra-smart-ocr-gateway</module>  <!-- 接口服务 -->
         <module>alinesno-infra-smart-ocr-client</module>  <!-- 对外引用 -->
         <module>alinesno-infra-smart-ocr-boot</module>  <!-- 启动服务 -->
 
         <!-- 前端服务
-        <module>alinesno-infra-smart-ocr-admin</module>
+        <module>alinesno-infra-smart-ocr-ui</module>
         -->
     </modules>
 

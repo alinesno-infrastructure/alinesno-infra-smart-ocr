@@ -104,4 +104,3 @@ def detect():
 if __name__ == '__main__':
     ocr = PaddleOCR(use_angle_cls=True, use_gpu=False)  # 初始化 PaddleOCR 模型，设置使用角度分类，不使用 GPU
     app.run(host='0.0.0.0', port=5002, debug=True, threaded=True, processes=1)  # 运行 Flask 应用
-

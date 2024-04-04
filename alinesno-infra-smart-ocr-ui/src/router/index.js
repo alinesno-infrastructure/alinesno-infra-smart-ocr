@@ -98,12 +98,6 @@ export const constantRoutes = [
         meta: { title: '应用管理', icon: 'dashboard', affix: true }
       }, 
       {
-        path: '/base/smart/online/index',
-        component: () => import('@/views/base/smart/online/index'),
-        name: '/base/smart/online/index',
-        meta: { title: '在线用户', icon: 'dashboard', affix: true }
-      }, 
-      {
         path: '/base/smart/model/index',
         component: () => import('@/views/base/smart/model/index'),
         name: '/base/smart/model/index',
@@ -116,34 +110,10 @@ export const constantRoutes = [
         meta: { title: '认证配置', icon: 'dashboard', affix: true }
       }, 
       {
-        path: '/base/smart/enterprise/index',
-        component: () => import('@/views/base/smart/enterprise/index'),
-        name: '/base/smart/enterprise/index',
-        meta: { title: '企业配置', icon: 'dashboard', affix: true }
-      }, 
-      {
-        path: '/base/smart/eventRecord/index',
-        component: () => import('@/views/base/smart/eventRecord/index'),
-        name: '/base/smart/eventRecord/index',
-        meta: { title: '日志记录', icon: 'dashboard', affix: true }
-      }, 
-      {
-        path: '/base/smart/loginRecord/index',
-        component: () => import('@/views/base/smart/loginRecord/index'),
-        name: '/base/smart/loginRecord/index',
-        meta: { title: '日志记录', icon: 'dashboard', affix: true }
-      }, 
-      {
         path: '/base/smart/apiRecord/index',
         component: () => import('@/views/base/smart/apiRecord/index'),
         name: '/base/smart/apiRecord/index',
         meta: { title: '日志记录', icon: 'dashboard', affix: true }
-      }, 
-      {
-        path: '/base/smart/accountSync/index',
-        component: () => import('@/views/base/smart/accountSync/index'),
-        name: '/base/smart/accountSync/index',
-        meta: { title: '账户同步', icon: 'dashboard', affix: true }
       }
       // >>>>>>>>>>>>>> smart_router_end   >>>>>>>>>>>>>>>>>>>>>
     ]

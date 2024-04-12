@@ -92,27 +92,33 @@ export const constantRoutes = [
 
       // >>>>>>>>>>>>>> smart_router_start >>>>>>>>>>>>>>>>>>>>>
       {
-        path: '/base/smart/application/index',
-        component: () => import('@/views/base/smart/application/index'),
-        name: '/base/smart/application/index',
+        path: '/smart/ocr/application/index',
+        component: () => import('@/views/smart/ocr/application/index'),
+        name: '/smart/ocr/application/index',
         meta: { title: '应用管理', icon: 'dashboard', affix: true }
       }, 
       {
-        path: '/base/smart/model/index',
-        component: () => import('@/views/base/smart/model/index'),
-        name: '/base/smart/model/index',
+        path: '/smart/ocr/type/index',
+        component: () => import('@/views/smart/ocr/type/index'),
+        name: '/smart/ocr/type/index',
+        meta: { title: '类型管理', icon: 'dashboard', affix: true }
+      },
+      {
+        path: '/smart/ocr/model/index',
+        component: () => import('@/views/smart/ocr/model/index'),
+        name: '/smart/ocr/model/index',
         meta: { title: '模型管理', icon: 'dashboard', affix: true }
       }, 
       {
-        path: '/base/smart/config/index',
-        component: () => import('@/views/base/smart/config/index'),
-        name: '/base/smart/config/index',
+        path: '/smart/ocr/config/index',
+        component: () => import('@/views/smart/ocr/config/index'),
+        name: '/smart/ocr/config/index',
         meta: { title: '认证配置', icon: 'dashboard', affix: true }
       }, 
       {
-        path: '/base/smart/apiRecord/index',
-        component: () => import('@/views/base/smart/apiRecord/index'),
-        name: '/base/smart/apiRecord/index',
+        path: '/smart/ocr/apiRecord/index',
+        component: () => import('@/views/smart/ocr/apiRecord/index'),
+        name: '/smart/ocr/apiRecord/index',
         meta: { title: '日志记录', icon: 'dashboard', affix: true }
       }
       // >>>>>>>>>>>>>> smart_router_end   >>>>>>>>>>>>>>>>>>>>>

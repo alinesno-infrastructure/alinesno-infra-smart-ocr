@@ -39,6 +39,12 @@
 			<optional>true</optional>
 		</dependency>
 
+		<dependency>
+			<groupId>com.alinesno.infra.common</groupId>
+			<artifactId>alinesno-infra-common-web-api-sso</artifactId>
+			<version>${revision}</version>
+		</dependency>
+
 	</dependencies>
 
 </project>

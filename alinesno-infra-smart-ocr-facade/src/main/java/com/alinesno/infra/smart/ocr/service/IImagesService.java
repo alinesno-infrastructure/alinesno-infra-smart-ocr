@@ -1,7 +1,7 @@
 package com.alinesno.infra.smart.ocr.service;
 
-import com.alinesno.infra.smart.ocr.entity.ImagesEntity;
 import com.alinesno.infra.common.facade.services.IBaseService;
+import com.alinesno.infra.smart.ocr.entity.ImagesEntity;
 
 /**
  * <p>

@@ -1,20 +1,16 @@
 # -*- coding: utf-8 -*-
 
-import os
 import cv2
-import time
-import yaml
-import uuid
-import json
+import os
 import requests
+import time
+import uuid
+from datetime import timedelta
+from flask import Flask, request, jsonify
+from paddleocr import PaddleOCR
+from werkzeug.utils import secure_filename
 
 from utils.ImageHelper import base64_to_ndarray, bytes_to_ndarray
-from datetime import timedelta
-from flask import Flask, render_template, request, jsonify
-from werkzeug.utils import secure_filename
-from werkzeug.middleware.dispatcher import DispatcherMiddleware
-from paddleocr import PaddleOCR, draw_ocr
-from werkzeug import run_simple
 
 app = Flask(__name__)
 

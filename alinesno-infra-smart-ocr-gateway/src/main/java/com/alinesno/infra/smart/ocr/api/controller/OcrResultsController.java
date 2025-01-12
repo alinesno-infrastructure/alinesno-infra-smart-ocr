@@ -1,11 +1,11 @@
 package com.alinesno.infra.smart.ocr.api.controller;
 
-import com.alinesno.infra.smart.ocr.entity.OcrResultsEntity;
-import com.alinesno.infra.smart.ocr.service.IOcrResultsService;
 import com.alinesno.infra.common.core.constants.SpringInstanceScope;
 import com.alinesno.infra.common.facade.pageable.DatatablesPageBean;
 import com.alinesno.infra.common.facade.pageable.TableDataInfo;
 import com.alinesno.infra.common.web.adapter.rest.BaseController;
+import com.alinesno.infra.smart.ocr.entity.OcrResultsEntity;
+import com.alinesno.infra.smart.ocr.service.IOcrResultsService;
 import io.swagger.annotations.Api;
 import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.lang.builder.ToStringBuilder;

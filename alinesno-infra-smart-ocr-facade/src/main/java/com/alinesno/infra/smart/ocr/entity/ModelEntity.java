@@ -1,6 +1,5 @@
 package com.alinesno.infra.smart.ocr.entity;
 
-import java.util.Date;
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -9,6 +8,8 @@ import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
 import com.gitee.sunchenbin.mybatis.actable.constants.MySqlTypeConstant;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.util.Date;
 
 
 /**

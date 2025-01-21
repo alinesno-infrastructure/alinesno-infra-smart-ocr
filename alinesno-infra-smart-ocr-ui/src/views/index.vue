@@ -44,7 +44,7 @@ import OperationWorkspaceApps from './operation-workspace/apps.vue'
 import OperationWorkspaceService from './operation-workspace/service.vue'
 
 const currentEnvClusterObj = ref({
-  appName: 'OCR视觉识别服务',
+  appName: '计算机视觉识别服务',
   clusterName: '基于多个主流(GPT/星火/文心一言等)大模型的服务调用和管理'  , 
   apiServerUrl: 'http://portal.infra.linesno.com'
 }) 

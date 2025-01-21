@@ -27,6 +27,15 @@
         <module>alinesno-infra-smart-ocr-adapter</module> <!-- 适配层 -->
         <module>alinesno-infra-smart-ocr-gateway</module>  <!-- 接口服务 -->
         <module>alinesno-infra-smart-ocr-client</module>  <!-- 对外引用 -->
+
+        <module>alinesno-infra-smart-ocr-anpr</module> <!-- 车牌识别 -->
+        <module>alinesno-infra-smart-ocr-einvoice</module> <!-- 发票识别 -->
+
+        <!-- 视觉识别 -->
+        <module>alinesno-infra-smart-vision-facade</module>
+        <module>alinesno-infra-smart-vision-model</module>
+        <module>alinesno-infra-smart-vision-domain</module>
+
         <module>alinesno-infra-smart-ocr-boot</module>  <!-- 启动服务 -->
 
         <!-- 前端服务

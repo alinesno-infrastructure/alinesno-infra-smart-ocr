@@ -71,7 +71,7 @@
                   <div class="item-datetime-date">12</div>
                 </div>
                 <div class="item-text">
-                  <div class="item-text-main-title">在AIP使用k8s快速搭建OCR视觉识别服务系统</div>
+                  <div class="item-text-main-title">在AIP使用k8s快速搭建计算机视觉识别服务系统</div>
                   <div class="item-text-main-desc">了解基础知识并找到有用的信息</div>
                 </div>
               </li>

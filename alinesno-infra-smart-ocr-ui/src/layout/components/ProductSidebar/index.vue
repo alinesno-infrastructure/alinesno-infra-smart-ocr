@@ -22,9 +22,13 @@ const router = useRouter();
 
 // 菜单列表
 const menuItems = ref([
-  {id:'1' , icon:'fa-brands fa-slack' , link:'/smart/ocr/project/list' , desc:'项目管理'},
-  {id:'2' , icon:'fa-solid fa-at' , link:'/smart/ocr/monitormanage/list' , desc:'监控管理'},
-  {id:'3' , icon:'fa-solid fa-file-pdf' , link:'/smart/ocr/openservice/list' , desc:'开通服务'}
+  {id:'11' , icon:'fa-brands fa-slack' , link:'/smart/ocr/project/list' , desc:'项目管理'},
+  {id:'2' , icon:'fa-brands fa-skype' , link:'/smart/ocr/monitormanage/list' , desc:'监控管理'},
+  {id:'3' , icon:'fa-solid fa-file-pdf' , link:'/smart/ocr/openservice/list' , desc:'开通服务'},
+  {id:'7' , icon:'fa-solid fa-box-open' , link:'/smart/ocr/openservice/list' , desc:'批量任务'},
+  {id:'8' , icon:'fa-brands fa-wordpress' , link:'/smart/ocr/openservice/list' , desc:'识别结果'},
+  {id:'4' , icon:'fa-solid fa-computer' , link:'/smart/ocr/analyse/index' , desc:'调用分析'},
+  {id:'5' , icon:'fa-solid fa-code-pull-request' , link:'/smart/ocr/apiRecord/index' , desc:'操作记录'},
 ]);
 
 // 打开服务市场

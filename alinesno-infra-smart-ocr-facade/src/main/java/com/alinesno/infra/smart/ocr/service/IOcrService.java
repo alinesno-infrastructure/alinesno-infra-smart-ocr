@@ -3,6 +3,8 @@ package com.alinesno.infra.smart.ocr.service;
 import com.alinesno.infra.common.facade.response.AjaxResult;
 import com.alinesno.infra.smart.ocr.api.*;
 
+import java.util.Map;
+
 /**
  * OCR服务接口，定义了所有OCR识别功能的方法。
  */
@@ -15,7 +17,7 @@ public interface IOcrService {
      * @param request 包含图片Base64编码和识别类型的请求对象
      * @return 返回包含识别结果的AjaxResult对象
      */
-    AjaxResult recognizeGeneralText(GeneralTextOcrRequestDto request);
+    String recognizeGeneralText(GeneralTextOcrRequestDto request);
 
     /**
      * 个人证照识别服务方法。
@@ -24,7 +26,7 @@ public interface IOcrService {
      * @param request 包含图片Base64编码和识别类型的请求对象
      * @return 返回包含识别结果的AjaxResult对象
      */
-    AjaxResult recognizePersonalId(PersonalIdOcrRequestDto request);
+    Map<String, String> recognizeIdCard(PersonalIdOcrRequestDto request);
 
     /**
      * 票据凭证识别服务方法。

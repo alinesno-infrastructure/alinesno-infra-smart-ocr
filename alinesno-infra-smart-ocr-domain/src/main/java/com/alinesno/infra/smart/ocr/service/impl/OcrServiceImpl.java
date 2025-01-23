@@ -3,6 +3,10 @@ package com.alinesno.infra.smart.ocr.service.impl;
 import com.alinesno.infra.common.facade.response.AjaxResult;
 import com.alinesno.infra.smart.ocr.api.*;
 import com.alinesno.infra.smart.ocr.service.IOcrService;
+import com.alinesno.infra.smart.ocr.utils.IdCardOcrUtils;
+import com.benjaminwan.ocrlibrary.OcrResult;
+import io.github.mymonstercat.Model;
+import io.github.mymonstercat.ocr.InferenceEngine;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -16,21 +20,29 @@ public class OcrServiceImpl implements IOcrService {
      * @return 返回包含识别结果的AjaxResult对象
      */
     @Override
-    public AjaxResult recognizeGeneralText(GeneralTextOcrRequestDto request) {
-        // 这里应实现具体的OCR逻辑，比如调用第三方API或使用本地OCR引擎
-        // 模拟返回成功的结果
-        return AjaxResult.success("通用文字识别成功", "模拟识别结果");
+    public String recognizeGeneralText(GeneralTextOcrRequestDto request) {
+
+        InferenceEngine engine = InferenceEngine.getInstance(Model.ONNX_PPOCR_V3);
+        OcrResult ocrResult = engine.runOcr(request.getFilePath().getAbsolutePath()) ;
+
+        return ocrResult.getStrRes().trim();
     }
 
     /**
      * 实现个人证照识别服务方法。
+     *
      * @param request 包含图片Base64编码和识别类型的请求对象
      * @return 返回包含识别结果的AjaxResult对象
      */
     @Override
-    public AjaxResult recognizePersonalId(PersonalIdOcrRequestDto request) {
+    public Map<String, String> recognizeIdCard(PersonalIdOcrRequestDto request) {
         // 实现个人证照识别逻辑
-        return AjaxResult.success("个人证照识别成功", "模拟识别结果");
+
+        InferenceEngine engine = InferenceEngine.getInstance(Model.ONNX_PPOCR_V3);
+        OcrResult ocrResult = engine.runOcr(request.getFilePath().getAbsolutePath()) ;
+
+        String result =  ocrResult.getStrRes().trim();
+        return IdCardOcrUtils.parseIdCardInfo(result) ;
     }
 
     /**

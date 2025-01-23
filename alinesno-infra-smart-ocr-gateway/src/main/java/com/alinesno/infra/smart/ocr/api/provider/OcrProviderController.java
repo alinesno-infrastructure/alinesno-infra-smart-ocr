@@ -7,6 +7,12 @@ import com.alinesno.infra.smart.ocr.service.IOcrService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.Map;
 
 @Slf4j
 @RestController
@@ -20,18 +26,82 @@ public class OcrProviderController extends SuperController {
      * 提供通用文字识别API端点
      */
     @PostMapping("/generalText")
-    public AjaxResult recognizeGeneralText(@RequestBody GeneralTextOcrRequestDto request) {
+    public AjaxResult recognizeGeneralText(@RequestPart("file") MultipartFile file) {
         log.info("Received general text OCR request.");
-        return ocrService.recognizeGeneralText(request);
+
+        // 检查文件是否为空
+        if (file.isEmpty()) {
+            return AjaxResult.error("File is empty");
+        }
+
+        GeneralTextOcrRequestDto  requestDto = new GeneralTextOcrRequestDto();
+
+        File tempFile = null;
+        try {
+            // 创建临时文件
+            tempFile = Files.createTempFile("ocr-", ".tmp").toFile();
+
+            // 将MultipartFile的内容复制到临时文件
+            file.transferTo(tempFile);
+
+            log.info("Temporary file created at: " + tempFile.getAbsolutePath());
+
+            // 处理文件和OCR逻辑
+            // 例如：检查文件类型、读取文件内容、调用OCR服务等
+            requestDto.setFilePath(tempFile);
+            String result = ocrService.recognizeGeneralText(requestDto);
+            return AjaxResult.success("OCR recognition successful", result);
+        } catch (IOException e) {
+            log.error("Error creating or writing to temporary file", e);
+            return AjaxResult.error("Failed to create temporary file");
+        } finally {
+            // 清理临时文件（如果需要）
+            if (tempFile != null && tempFile.exists()) {
+                tempFile.deleteOnExit(); // 在JVM退出时删除临时文件
+            }
+        }
     }
 
     /**
-     * 提供个人证照识别API端点
+     * 提供个人身份证识别
      */
-    @PostMapping("/personalId")
-    public AjaxResult recognizePersonalId(@RequestBody PersonalIdOcrRequestDto request) {
+    @PostMapping("/idCard")
+    public AjaxResult recognizeIdCard(@RequestPart("file") MultipartFile file) {
         log.info("Received personal ID OCR request.");
-        return ocrService.recognizePersonalId(request);
+
+        log.info("Received general text OCR request.");
+
+        // 检查文件是否为空
+        if (file.isEmpty()) {
+            return AjaxResult.error("File is empty");
+        }
+
+        PersonalIdOcrRequestDto  requestDto = new PersonalIdOcrRequestDto();
+
+        File tempFile = null;
+        try {
+            // 创建临时文件
+            tempFile = Files.createTempFile("ocr-", ".tmp").toFile();
+
+            // 将MultipartFile的内容复制到临时文件
+            file.transferTo(tempFile);
+
+            log.info("Temporary file created at: " + tempFile.getAbsolutePath());
+
+            // 处理文件和OCR逻辑
+            // 例如：检查文件类型、读取文件内容、调用OCR服务等
+            requestDto.setFilePath(tempFile);
+            Map<String, String> result = ocrService.recognizeIdCard(requestDto);
+            return AjaxResult.success("OCR recognition successful", result);
+        } catch (IOException e) {
+            log.error("Error creating or writing to temporary file", e);
+            return AjaxResult.error("Failed to create temporary file");
+        } finally {
+            // 清理临时文件（如果需要）
+            if (tempFile != null && tempFile.exists()) {
+                tempFile.deleteOnExit(); // 在JVM退出时删除临时文件
+            }
+        }
     }
 
     /**

@@ -52,6 +52,7 @@ alinesno:
     excludes:
       - /sso/**
       - /logout
+      - /api/infra/smart/ocr/**
   infra:
     gateway:
       host: http://alinesno-infra-base-gateway-proxy-application.beta.base.infra.linesno.com

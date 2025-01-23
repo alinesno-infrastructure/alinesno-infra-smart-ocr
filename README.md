@@ -3,9 +3,17 @@ OCR视觉识别服务，用户可以快速识别和提取图像中的文字信�
 
 ## 功能列表
 
-- OCR统一识别: 提供一个统一的接口，简化不同场景下的文字识别流程。
-- 通用文字识别 :支持多语言文本识别，能够处理各类文档中的印刷体和手写体文字。
-- 个人证照识别: 针对身份证、护照等个人证件，快速精准地提取关键信息。
+- [完成]通用文字识别
+
+## 调用接口
+
+通用文字识别
+
+```shell
+curl --location --request POST 'http://localhost:30300/api/infra/smart/ocr/generalText' \
+--header 'Content-Type: multipart/form-data; boundary=--------------------------169335550316702674434845' \
+--form 'file=@"d043ad4bd11373f086e687d6a90f4bfbfaed0499.jpg"'
+```
 
 # 鸣谢
 

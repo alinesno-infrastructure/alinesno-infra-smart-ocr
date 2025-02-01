@@ -1,6 +1,8 @@
 package com.alinesno.infra.smart.ocr.api.controller;
 
 import com.alinesno.infra.common.core.constants.SpringInstanceScope;
+import com.alinesno.infra.common.extend.datasource.annotation.DataPermissionSave;
+import com.alinesno.infra.common.extend.datasource.annotation.DataPermissionScope;
 import com.alinesno.infra.common.facade.pageable.DatatablesPageBean;
 import com.alinesno.infra.common.facade.pageable.TableDataInfo;
 import com.alinesno.infra.common.facade.response.AjaxResult;
@@ -45,6 +47,7 @@ public class ProjectController extends BaseController<ProjectEntity, IProjectSer
      * @param page    DatatablesPageBean对象。
      * @return 包含DataTables数据的TableDataInfo对象。
      */
+    @DataPermissionScope
     @ResponseBody
     @PostMapping("/datatables")
     public TableDataInfo datatables(HttpServletRequest request, Model model, DatatablesPageBean page) {
@@ -52,16 +55,13 @@ public class ProjectController extends BaseController<ProjectEntity, IProjectSer
         return this.toPage(model, this.getFeign(), page);
     }
 
+    @DataPermissionSave
     @ResponseBody
     @PostMapping("/updateOpenService")
     public AjaxResult updateDocumentType(HttpServletRequest request, @RequestBody ProjectEntity project) {
         log.debug("projectId = {} , documentType = {}", project.getId(),  project.getOpenService());
         boolean ifSuccess = service.updateOpenService(project.getId(), project.getOpenService());
-        if ( ifSuccess ) {
-            return AjaxResult.success();
-        }else{
-            return AjaxResult.error();
-        }
+        return ifSuccess ? AjaxResult.success() : AjaxResult.error();
     }
 
 

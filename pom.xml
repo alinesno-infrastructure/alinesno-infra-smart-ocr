@@ -18,6 +18,8 @@
     <properties>
         <revision>1.1.0-SNAPSHOT</revision>
         <alinesno.infra.version>${revision}</alinesno.infra.version>
+
+        <docker.base.images>registry.cn-shenzhen.aliyuncs.com/alinesno-infra-base/openjdk:21-ubuntu</docker.base.images>
     </properties>
 
     <modules>

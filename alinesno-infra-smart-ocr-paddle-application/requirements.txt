@@ -1,4 +1,4 @@
-fastapi==0.101.0
+fastapi==0.109.1
 paddleocr==2.7.0.0
 paddlepaddle==2.5.1
 python-multipart==0.0.6

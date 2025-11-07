@@ -19,14 +19,30 @@
 		<dependency>
 			<groupId>com.alinesno.infra.common</groupId>
 			<artifactId>alinesno-infra-common-facade</artifactId>
-			<version>${revision}</version>
+			<version>${alinesno.infra.common.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.alinesno.infra.common</groupId>
 			<artifactId>alinesno-infra-common-web-api-log</artifactId>
-			<version>${revision}</version>
+			<version>${alinesno.infra.common.version}</version>
 		</dependency>
+
+        <!-->>>>>>>>>>>>>>>>>>>> ai识别模块_start >>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <!--人脸识别模块-->
+        <dependency>
+            <groupId>cn.smartjavaai</groupId>
+            <artifactId>all</artifactId>
+            <version>1.0.27</version>
+            <!-- 排除slf4j-simple -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-simple</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-->>>>>>>>>>>>>>>>>>>> ai识别模块_end >>>>>>>>>>>>>>>>>>>>>>>>>>-->
 
 	</dependencies>
 

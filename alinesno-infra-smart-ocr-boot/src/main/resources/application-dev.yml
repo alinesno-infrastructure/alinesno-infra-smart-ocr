@@ -15,7 +15,7 @@ spring:
     redis:
       host: 127.0.0.1
       port: 6379
-      password: aip@local
+#      password: aip@local
   devtools:
     restart:
       enabled: true
@@ -35,7 +35,7 @@ actable:
 # sa-token配置
 sa-token:
   token-name: Authorization
-  host-path: http://alinesno-infra-base-identity-auth-application.beta.base.infra.linesno.com
+  host-path: http://alinesno-infra-base-identity-auth-application.linesno.com
   sso:
     auth-url: ${sa-token.host-path}/login
     is-http: true
@@ -55,4 +55,4 @@ alinesno:
       - /api/infra/smart/ocr/**
   infra:
     gateway:
-      host: http://alinesno-infra-base-gateway-proxy-application.beta.base.infra.linesno.com
+      host: http://alinesno-infra-base-gateway-proxy-application.linesno.com

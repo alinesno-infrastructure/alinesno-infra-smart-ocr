@@ -19,7 +19,7 @@
 		<dependency>
 			<groupId>com.alinesno.infra.smart</groupId>
 			<artifactId>alinesno-infra-smart-ocr-facade</artifactId>
-			<version>${revision}</version>
+            <version>${revision}</version>
 		</dependency>
 
 	</dependencies>
